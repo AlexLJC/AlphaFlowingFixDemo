@@ -12,6 +12,36 @@
         <maven.compiler.source>21</maven.compiler.source>
         <maven.compiler.target>21</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <quickfixj.version>2.3.2</quickfixj.version>
+        <slf4j.version>2.0.13</slf4j.version>
     </properties>
-    
+    <dependencies>
+        <!-- QuickFIX/J -->
+        <dependency>
+            <groupId>org.quickfixj</groupId>
+            <artifactId>quickfixj-all</artifactId>
+            <version>${quickfixj.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-simple</artifactId>
+            <version>${slf4j.version}</version>
+            <scope>runtime</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <!--mvn -q exec:java-->
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>3.5.1</version>
+                <configuration>
+                    <mainClass>FixClientApp</mainClass>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>
