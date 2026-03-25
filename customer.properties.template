@@ -1,0 +1,26 @@
+# Public template only. Copy to your private runtime file and fill all required values.
+# Recommended private filename: customer.private.properties (or keep customer.properties).
+# Do not commit private runtime files.
+#
+# Password handling:
+# 1) Recommended: set env FIXDEMO_PASSWORD_PLAIN at runtime.
+# 2) Compatibility fallback: fixdemo.passwordPlain in private file.
+
+# Required runtime keys
+fixdemo.host=<required-host>
+fixdemo.port=<required-port>
+fixdemo.targetCompId=<required-target-comp-id>
+fixdemo.clientId=<required-client-id>
+fixdemo.symbol=<required-symbol>
+fixdemo.dictionary.path=<required-dictionary-path>
+fixdemo.tls.enabledProtocols=<required-enabled-protocols:TLSv1.2,TLSv1.3>
+fixdemo.suite=<required-suite:all|smoke|negative>
+fixdemo.report.out=<required-report-output-dir>
+fixdemo.onlyLogon=<required-boolean:true|false>
+
+# Optional compatibility fallback (not recommended in shared environments):
+# fixdemo.passwordPlain=<plain-password>
+
+# Optional TLS overrides
+# fixdemo.tls.trustStore=<absolute-or-relative-path>
+# fixdemo.tls.trustStorePassword=<trust-store-password>
